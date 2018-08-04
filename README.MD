@@ -1,6 +1,6 @@
 # Textfile
 
-The simple theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Textfile.
+A very simple theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Textfile.
 
 
 &nbsp;
