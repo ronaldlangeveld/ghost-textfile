@@ -1,0 +1,63 @@
+{{!< default}}
+        <ul class="container is-size-7">
+{{navigation}}
+</ul>
+
+<main class="container custom-font" id="content">
+
+  <article class="post {{post_class}}">
+
+    {{#post}}
+
+      {{!-- <header>
+          <h1 class="title is-4">{{title}}</h1>
+
+          <div class="subtitle is-7">
+              Posted on
+              <time class="post__date" datetime="{{date format='YYYY-MM-DD'}}">
+                {{date format="MMMM Do, YYYY"}}.
+              </time>
+
+              {{#if tags}}
+                <span class="post__tags">
+                  {{tags prefix="Tagged "}}
+                </span>
+              {{/if}}
+          </div>
+      </header> --}}
+
+      <section class="hero has-text-centered">
+  <div class="hero-body">
+    <div class="container">
+        <div class="columns is-centered">
+
+<div class="column is-half">
+
+{{!-- <img src="{{img_url feature_image}}"> --}}
+</div>
+
+        </div>
+      <h1 class="title">
+      {{title}}
+      </h1>
+    </div>
+  </div>
+</section>
+
+      <div class="columns is-centered">
+
+<div class="column is-half">
+    <div class="content is-medium">
+
+  {{content}}
+
+</div>
+</div>
+
+      </div>
+
+
+    {{/post}}
+
+  </article>
+</main>

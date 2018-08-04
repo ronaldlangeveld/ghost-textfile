@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{! Document Settings }}
+  <meta charset="utf-8" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{! Makes IE support useful HTML5/CSS3 features }}
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  {{! Page Meta }}
+  <title>{{meta_title}}{{#is "post, page"}} — {{@blog.title}}{{/is}}</title>
+
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset "main.css"}}" />
+
+  {{! Ghost outputs important stuff with this tag }}
+ {{ghost_head}}
+</head>
+<body class="{{body_class}} custom-font" id="body">
+                  {{!-- <div class="columns is-centered">
+<div class="column is-half has-text-centered">
+
+<div class="tabs is-centered is-small">
+  <ul>
+{{navigation}}
+
+  </ul>
+</div>
+
+
+</div>
+
+</div> --}}
+
+  {{! Everything else gets inserted here }}
+  {{{body}}}
+
+  <div class="container">
+
+      <div class="columns is-centered">
+          <div class="column is-half">
+              <hr>
+<br>
+
+<div class="has-text-centered">
+
+<a href="/">{{@blog.title}}</a> © {{date format="YYYY"}}
+
+</div>
+          </div>
+
+      </div>
+
+  </div>
+
+  {{! Site Footer }}
+  {{!-- {{> footer}} --}}
+
+  {{! Ghost outputs important scripts with this, including the the content for the code injection pane }}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js"></script>
+    {{#if pagination.pages}}
+    <script>
+        // maxPages is a global variable that is needed to determine
+        // if we need to load more pages for the infinitescroll, or if
+        // we reached the last page already.
+        var maxPages = parseInt('{{pagination.pages}}');
+    </script>
+    <script src="{{asset "infinitescroll.js"}}"></script>
+    {{/if}}
+<script src="{{asset "main.js"}}"></script>
+  {{ghost_foot}}
+</body>
+</html>

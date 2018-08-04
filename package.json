@@ -1,0 +1,15 @@
+{
+    "name": "textfile",
+    "description": "A super simple and minimal Ghost Theme. As clean as a new Text File",
+    "version": "1.0.0",
+    "engines": {
+        "ghost": ">=1.0.0"
+    },
+    "license": "MIT",
+    "author": {
+        "email": "hi@ronaldlangeveld.com"
+    },
+    "config": {
+        "posts_per_page": 50
+    }
+}
